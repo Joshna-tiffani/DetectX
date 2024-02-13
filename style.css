@@ -1,0 +1,97 @@
+.header{
+    width: 100%;
+    background-color: black;
+}
+/* body{
+    background-color: red;
+} */
+img{
+    width: 100px; 
+    position: relative;
+    left: 70px;
+}
+h1{
+    font-size:6ch;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    margin-left: 6%;
+}
+p{
+    position: absolute;
+    margin-left: 7%;
+}
+button{
+    color: white;
+    background-color:black;
+    width:120px;
+    height: 50px; 
+    border: none;
+    float:left;
+    position: relative;
+    margin-left:7%;
+    border-radius: 5%;
+
+}
+.files{
+     float:left;
+     position: absolute;
+     left:325px;
+     top: 600px;
+     font-size:x-large;
+     font-style: normal;
+     
+}
+.details{
+    float:left;
+    position: relative;
+    left:700px;
+    top:150px;
+    font-style:normal;
+    font-size:3ch;
+    
+}
+.sumbit{
+    background-color:rgb(6, 163, 140);
+    color:whitesmoke;
+    float:center;
+    border: none;
+    position: absolute;
+    left: 520px;
+    top: 800px;
+    width: 150px;;
+    height:50px;
+    text-align-last: center;
+    border-radius: 5%;
+    font-size:3ch;
+}
+.image{
+    width: 450px;
+    height: 315px;
+    position: absolute;
+    left: 769px;
+    top: 125px;
+    object-fit: cover;
+}
+.length{
+    float:left;
+    position: relative;
+    left:500px;
+    top:200px;
+    font-style:normal;
+    font-size:3ch;
+}
+.print{
+    background-color:rgb(6, 163, 140);
+    color:whitesmoke;
+    float:center;
+    border: none;
+    position: absolute;
+    left: 620px;
+    top: 500px;
+    width: 150px;
+    height:50px;
+    text-align-last: center;
+    border-radius: 5%;
+    font-size:3ch;
+}
+
