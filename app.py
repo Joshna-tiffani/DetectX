@@ -19,14 +19,14 @@ def upload_file():
         file = request.files['file']
         if file.filename == '':
             return 'No selected file'
-        if file:
-            filename = file.filename
+        if file: 
             fileData = file.read()
-            age = request.form.get('name')
+            age = request.form.get('age')
             name = request.form.get('name')
-            gender = request.form.get('name')
+            gender = request.form.get('gender')
 
-            count = checkTelomereLength(inputString=fileData)
+            count = checkTelomereLength(inputString=fileData) # this return the count
+
             data =  {
                     "riskOfCancer":"No",
                     "telomereLength":count,
@@ -35,13 +35,14 @@ def upload_file():
                     "age": age
                 }
             
-            if count > 0:
+            if count > 0 and int(age) > 20  and gender == 'male':
                 data['riskOfCancer'] = "Yes"
             else:
                  data['riskOfCancer'] = "No"
-           
+            
             return render_template('output.html',data=data)
-    return render_template('upload.html')
+    else:
+        return render_template('upload.html')
 
 if __name__ == '__main__':
     app.run(host='localhost', port=8000)
