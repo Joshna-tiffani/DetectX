@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="true" name="HandheldFriendly" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta content="width" name="MobileOptimized" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<script>
+function showLoading(){
+    document.getElementById("loading").style.display = "block"
+    document.getElementById("uploadSection").style.display = "none"
+}
+</script>
+
+<body>
+    <div class="header">
+        <img class="logo" src="{{ url_for('static', filename='images/detectx.jpg') }}">
+    </div>
+    <div id="loading" style="display:none">
+        <img class="loading-image" src="{{ url_for('static', filename='images/loading.gif') }}">
+    </div>
+    <div id="uploadSection">
+        <div class="heading">
+            <img class="image" src="{{ url_for('static', filename='images/gene.jpg') }}">
+            <h1>DetectX-Empowering Health</h1><br><br><br><br><br>
+            <p>This is a website that helps you to stay ahead with our clear cut cancer prediction<br><br> using telomere
+                length as a biomarker.Upload fasta files containing chromosome <br><br>sequence from your device. </p>
+            <br><br><br><br>
+        </div>
+        <div>
+            <br><br><br><br>
+        </div>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="files">
+                <label for="file">Drop your files here<br><br></label>
+                <input type="file" name="file">
+            </div>
+            <div class="details">
+                <label for="age">Age:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label>
+                <input name="age" type="number">
+                <br><br>
+                <label for="name">Name:&nbsp; &nbsp;</label>
+                <input name="name" name type="text">
+                <br><br>
+                <label for="gender">Gender: </label>
+                <input name="gender" type="text">
+                <br><br>
+            </div>
+
+            <input class="sumbit" onclick="showLoading()" type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
