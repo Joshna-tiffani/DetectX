@@ -36,7 +36,7 @@ button{
      float:left;
      position: absolute;
      left:325px;
-     top: 600px;
+     top: 467px;
      font-size:x-large;
      font-style: normal;
      
@@ -57,7 +57,7 @@ button{
     border: none;
     position: absolute;
     left: 520px;
-    top: 800px;
+    top: 650px;
     width: 150px;;
     height:50px;
     text-align-last: center;
@@ -93,5 +93,9 @@ button{
     text-align-last: center;
     border-radius: 5%;
     font-size:3ch;
+}
+.loading-image{
+    width: 90%;
+    margin: 0 auto;
 }
 
